@@ -297,7 +297,7 @@ def getReleaseVersion() {
     }
     return pom.version.replace("-SNAPSHOT", ".${versionNumber}")
 }
-
+}
 // if you want parallel execution , check below :
 /* stage('Quality Gate(Integration Tests and Sonar Scan)') {
            // Run the maven build
