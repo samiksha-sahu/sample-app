@@ -210,8 +210,9 @@ pipeline {
                     }
                 }
             }
-        }
-    } */
+        } */
+    } 
+
    /* post {
         // Always runs. And it runs before any of the other post conditions.
         always {
@@ -238,9 +239,9 @@ pipeline {
         // And we'd really like to be sure that this build doesn't hang forever, so
         // let's time it out after an hour.
         timeout(time: 25, unit: 'MINUTES')
-    }*/
+    }
 
-}
+} */
 def developmentArtifactVersion = ''
 def releasedVersion = ''
 // get change log to be send over the mail
@@ -297,7 +298,11 @@ def getReleaseVersion() {
     }
     return pom.version.replace("-SNAPSHOT", ".${versionNumber}")
 }
-}
+
+
+
+
+
 // if you want parallel execution , check below :
 /* stage('Quality Gate(Integration Tests and Sonar Scan)') {
            // Run the maven build
